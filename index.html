@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>إسماعيل & سارة — دعوة زفاف</title>
+
+  <meta name="description" content="انقر لفتح دعوة زفاف مميزة لمشاركتنا فرحة العمر. تعرف على تفاصيل الحفل وكن جزءاً من أجمل اللحظات." />
+  <meta property="og:title" content="دعوة زفاف إسماعيل ❤️ سارة" />
+  <meta property="og:description" content="انقر لفتح دعوة زفاف مميزة لمشاركتنا فرحة العمر." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400;1,600&family=Cinzel:wght@400;500&family=Amiri:ital,wght@0,400;0,700;1,400&family=Lateef:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <!-- ═══ BACKGROUND MUSIC ═══ -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="https://cdn.pixabay.com/audio/2024/09/10/audio_6e1cbc7a34.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- ═══ MUSIC TOGGLE ═══ -->
+  <button id="musicToggle" class="music-toggle" aria-label="Toggle Music">
+    <span class="music-icon playing">🎵</span>
+    <span class="music-icon muted">🔇</span>
+  </button>
+
+  <!-- ═══ ENVELOPE SCREEN ═══ -->
+  <div id="env-screen" onclick="openEnvelope()">
+    <div class="env-bg-wrap">
+      <img src="/imgs/envelope-bg.jpg" alt="" class="env-bg-img" />
+      <div class="env-fallback-bg"></div>
+    </div>
+
+    <div class="env-glow"></div>
+
+    <div class="env-deco d1">🌹</div>
+    <div class="env-deco d2">🌸</div>
+    <div class="env-deco d3">🌷</div>
+    <div class="env-deco d4">🌿</div>
+
+    <div class="env-tap-ring"></div>
+    <div class="seal-ripple"></div>
+    <div class="env-glint"></div>
+    <div class="env-hint">اضغط لفتح دعوتك</div>
+  </div>
+
+  <!-- ═══ INVITATION ═══ -->
+  <div id="invitation">
+
+    <!-- 1. HERO SECTION -->
+    <section class="s-savedate">
+      <img src="/imgs/hero-bg.jpg" alt="" class="hero-bg-img" />
+      <div class="hero-overlay"></div>
+
+      <div class="savedate-card reveal">
+        <div class="sd-bismillah">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ</div>
+        <div class="sd-label">We're Getting Married</div>
+        <div class="sd-names">
+          <span class="sd-name1">Ismail</span>
+          <span class="sd-amp">&</span>
+          <span class="sd-name2">Sara</span>
+        </div>
+        <div class="sd-arabic-sub">عَمَّرَ اللهُ الحُبَّ بَيْنَكُما، وَسَقَى أَيَّامَكُما بِالْحُبِّ وَالْمَسَرَّاتِ</div>
+        <div class="sd-en-sub">in this world, and in the next</div>
+        <div class="sd-divider"></div>
+        <div class="sd-date">13th · AUG · 2026</div>
+      </div>
+
+      <div class="scroll-hint" id="scrollHintBtn">
+        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+    </section>
+
+    <!-- PEARL SECTION -->
+    <section class="s-pearl">
+      <div class="pearl-image-wrap">
+        <img class="pearl-bg" src="/imgs/pearl-bg.jpg" alt="" />
+        <div class="pearl-overlay"></div>
+      </div>
+    </section>
+
+    <!-- FAMILIES SECTION -->
+    <section class="families-royal reveal">
+      <div class="royal-header">
+        <span></span>
+        <div class="ww-title reveal">Two Families</div>
+        <span></span>
+      </div>
+
+      <p class="royal-text">
+        في أمسيةٍ تتلألأ بالفرح، وتُزهر فيها الأمنيات،
+        يجمع القدر بين عائلتين كريمتين لتبدأ رحلةٌ جديدة
+        عنوانها المحبة والمودة والسكينة.
+      </p>
+
+      <div class="families-wrapper">
+        <div class="family-card">
+          <div class="card-glow"></div>
+          <div class="family-label">والد العريس</div>
+          <h3>محمد ابراهيم حمد</h3>
+        </div>
+
+        <div class="royal-center">
+          <div class="center-line"></div>
+          <div class="royal-emblem">
+            <div class="emblem-ring"></div>
+            <span>✦</span>
+          </div>
+          <div class="center-line"></div>
+        </div>
+
+        <div class="family-card">
+          <div class="card-glow"></div>
+          <div class="family-label">والد العروس</div>
+          <h3>وسام اسماعيل التلباني</h3>
+        </div>
+      </div>
+
+      <div class="royal-note">
+        بكل الحب والتقدير تتشرف العائلتان بدعوتكم
+        لمشاركتهم هذه المناسبة السعيدة ومباركة بداية
+        فصل جديد من أجمل الحكايات.
+      </div>
+    </section>
+
+    <!-- 2. WELCOME + COUNTDOWN -->
+    <section class="s-welcome">
+      <div class="welcome-deco-left">🌿</div>
+      <div class="welcome-deco-right">🌿</div>
+      <div class="wl-countdown-label reveal">Countdown</div>
+      <div class="wl-until reveal">UNTIL 13 AUG 2026</div>
+      <div class="wl-cd reveal">
+        <div class="wl-cd-item">
+          <span class="wl-cd-num" id="wlD">00</span>
+          <div class="wl-cd-lbl">Days</div>
+        </div>
+        <div class="wl-cd-item">
+          <span class="wl-cd-num" id="wlH">00</span>
+          <div class="wl-cd-lbl">Hours</div>
+        </div>
+        <div class="wl-cd-item">
+          <span class="wl-cd-num" id="wlM">00</span>
+          <div class="wl-cd-lbl">Mins</div>
+        </div>
+        <div class="wl-cd-item">
+          <span class="wl-cd-num" id="wlS">00</span>
+          <div class="wl-cd-lbl">Secs</div>
+        </div>
+      </div>
+      <div class="wl-separator reveal">
+        <svg viewBox="0 0 200 24" fill="none">
+          <line x1="0" y1="12" x2="80" y2="12" stroke="#c4a97a" stroke-width="0.5"></line>
+          <circle cx="100" cy="12" r="4" stroke="#c4a97a" stroke-width="0.5"></circle>
+          <circle cx="88" cy="12" r="2" stroke="#c4a97a" stroke-width="0.5"></circle>
+          <circle cx="112" cy="12" r="2" stroke="#c4a97a" stroke-width="0.5"></circle>
+          <line x1="120" y1="12" x2="200" y2="12" stroke="#c4a97a" stroke-width="0.5"></line>
+          <circle cx="100" cy="12" r="1.5" fill="#c4a97a"></circle>
+        </svg>
+      </div>
+      <div class="wl-title reveal">!Welcome</div>
+      <div class="wl-body reveal">
+        يسعدنا أن ندعوكم لمشاركتنا فرحة بداية رحلتنا معًا إلى الأبد. هنا ستجدون كل ما تحتاجونه عن يومنا المميز.
+      </div>
+    </section>
+
+    <!-- 4. WHEN & WHERE -->
+    <section class="s-whenwhere">
+      <div class="ww-title reveal">When & Where</div>
+      <div class="wl-separator reveal" style="margin-bottom:28px">
+        <svg viewBox="0 0 200 24" fill="none">
+          <line x1="0" y1="12" x2="80" y2="12" stroke="#c4a97a" stroke-width="0.5"></line>
+          <circle cx="100" cy="12" r="4" stroke="#c4a97a" stroke-width="0.5"></circle>
+          <circle cx="88" cy="12" r="2" stroke="#c4a97a" stroke-width="0.5"></circle>
+          <circle cx="112" cy="12" r="2" stroke="#c4a97a" stroke-width="0.5"></circle>
+          <line x1="120" y1="12" x2="200" y2="12" stroke="#c4a97a" stroke-width="0.5"></line>
+          <circle cx="100" cy="12" r="1.5" fill="#c4a97a"></circle>
+        </svg>
+      </div>
+      <div class="ww-times reveal" dir="ltr">
+        <div class="ww-time-block">
+          <div class="ww-time-num">5:30 <span style="font-size:1.2rem; color:var(--text-mid)">PM</span></div>
+          <div class="ww-time-label">Starts</div>
+        </div>
+      </div>
+      <div class="ww-card-grid reveal">
+        <div class="ww-card">
+          <span class="ww-card-icon">🏛️</span>
+          <span class="ww-card-label">Venue</span>
+          <span class="ww-card-main">قاعة فيولت</span>
+          <span class="ww-card-sub">Violet Hall</span>
+        </div>
+        <div class="ww-card">
+          <span class="ww-card-icon">📅</span>
+          <span class="ww-card-label">Date</span>
+          <span class="ww-card-main">١٣ أغسطس ٢٠٢٦</span>
+          <span class="ww-card-sub">13 August 2026</span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="inv-footer">
+      <div class="inv-footer-text">
+        إسماعيل ❤️ سارة · ١٣ أغسطس ٢٠٢٦
+      </div>
+    </footer>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
