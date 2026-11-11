@@ -1,7 +1,7 @@
 /* ══════════════════════════════════════════════════════
    Wedding Invitation — Main JavaScript
-   Groom: Ismail | Bride: Sara | Date: 13 Aug 2026
-   Venue: Violet Hall
+   Groom: Mohammad | Bride: Ruba | Date: 22 Nov 2026
+   Venue: Love Story Hall - Deir al-Balah
 ══════════════════════════════════════════════════════ */
 
 import './style.css';
@@ -82,7 +82,7 @@ window.addEventListener("mousedown", handleUserInteraction, { passive: true });
    4. COUNTDOWN TIMER
 ────────────────────────────────────────── */
 function tick() {
-  const target = new Date('2026-08-13T19:00:00').getTime();
+  const target = new Date('2026-11-22T17:00:00').getTime();
   const now = new Date().getTime();
   const diff = target - now;
 
@@ -225,4 +225,3 @@ window.addEventListener('scroll', () => {
     hero.style.transform = `translateY(${offset}px)`;
   }
 }, { passive: true });
-
